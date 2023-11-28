@@ -32,7 +32,10 @@
           <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login}" href="#">login</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">logout</a>
+<!--          <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">logout</a>-->
+          <form action="#" th:action="@{/logout}" method ="POST" >
+            <input type="submit" value="logut" />
+          </form>
         </li>
         <li class="nav-item active">
           <a class="nav-link" th:href="@{/cart}" href="#">cart</a>
